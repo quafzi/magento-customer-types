@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Customer
+ * @package     Quafzi_CustomerTypes
+ * @author      Thomas Birke <tbirke@netextreme.de>
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Quafzi_CustomerTypes>
+            <version>0.1.0</version>
+        </Quafzi_CustomerTypes>
+    </modules>
+    <global>
+        <models>
+            <customertypes>
+                <class>Quafzi_CustomerTypes_Model</class>
+            </customertypes>
+        </models>
+        <helpers>
+            <customertypes>
+                <class>Quafzi_CustomerTypes_Helper</class>
+            </customertypes>
+        </helpers>
+        <resources>
+            <customertypes_setup>
+                <setup>
+                    <module>Quafzi_CustomerTypes</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </customertypes_setup>
+        </resources>
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Quafzi_CustomerTypes>
+                     <files>
+                          <default>Quafzi_CustomerTypes.csv</default>
+                     </files>
+                </Quafzi_CustomerTypes>
+            </modules>
+        </translate>
+    </adminhtml>
+</config>

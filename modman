@@ -1,2 +1,3 @@
 app/etc/modules/Quafzi_CustomerTypes.xml app/etc/modules/Quafzi_CustomerTypes.xml
 app/code/community/Quafzi/CustomerTypes app/code/community/Quafzi/CustomerTypes
+app/locale/de_DE/Quafzi_CustomerTypes.csv app/locale/de_DE/Quafzi_CustomerTypes.csv
