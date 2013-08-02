@@ -23,11 +23,16 @@ class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
 	{
         if ($name == 'action')
         {
+            $types = Mage::getModel('customertypes/system_config_source_customer_types')
+                ->toOptionArray();
+            unset($types['']);
             self::addColumn('type', array(
                 'header'    => Mage::helper('customertypes')->__('Customer Type'),
                 'align'     => 'center',
                 'width'     => '80px',
-                'index'     => 'type'
+                'index'     => 'type',
+                'type'      => 'options',
+                'options'   => $types
             ));
         }
 
