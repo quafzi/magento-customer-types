@@ -24,7 +24,7 @@ class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
         if ($name == 'action')
         {
             self::addColumn('type', array(
-                'header'    => Mage::helper('customer')->__('Customer Type'),
+                'header'    => Mage::helper('customertypes')->__('Customer Type'),
                 'align'     => 'center',
                 'width'     => '80px',
                 'index'     => 'type'
@@ -32,5 +32,30 @@ class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
         }
 
 		return parent::addColumn($name, $params);
+	}
+
+	protected function _prepareMassaction()
+	{
+		parent::_prepareMassaction();
+
+        $types = Mage::getModel('customertypes/system_config_source_customer_types')
+            ->toOptionArray();
+        unset($types['']);
+
+        $this->getMassactionBlock()->addItem('change_customer_type', array(
+            'label'      => Mage::helper('customertypes')->__('Change Customer Type'),
+            'url'        => $this->getUrl('customertypes/admin/massChange'),
+            'additional' => array(
+                'customer_type' => array(
+                    'name'   => 'customer_type',
+                    'type'   => 'select',
+                    'class'  => 'required-entry',
+                    'label'  => Mage::helper('customertypes') -> __('Customer Type'),
+                    'values' => $types
+                )
+            )
+        ));
+
+		return $this;
 	}
 }

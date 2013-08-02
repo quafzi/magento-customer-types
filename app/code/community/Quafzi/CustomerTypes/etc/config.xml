@@ -47,6 +47,17 @@
             </customertypes_setup>
         </resources>
     </global>
+    <admin>
+        <routers>
+            <customertypes>
+                <use>admin</use>
+                <args>
+                    <module>Quafzi_CustomerTypes</module>
+                    <frontName>customertypes</frontName>
+                </args>
+            </customertypes>
+        </routers>
+    </admin>
     <adminhtml>
         <translate>
             <modules>
