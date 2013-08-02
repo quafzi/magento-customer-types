@@ -14,16 +14,27 @@
         </Quafzi_CustomerTypes>
     </modules>
     <global>
-        <models>
+        <blocks>
             <customertypes>
-                <class>Quafzi_CustomerTypes_Model</class>
+                <class>Quafzi_CustomerTypes_Block</class>
             </customertypes>
-        </models>
+            <adminhtml>
+                <rewrite>
+                    <!-- overwrite Mage_Adminhtml_Block_Customer_Grid to add type to grid -->
+                    <customer_grid>Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid</customer_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
         <helpers>
             <customertypes>
                 <class>Quafzi_CustomerTypes_Helper</class>
             </customertypes>
         </helpers>
+        <models>
+            <customertypes>
+                <class>Quafzi_CustomerTypes_Model</class>
+            </customertypes>
+        </models>
         <resources>
             <customertypes_setup>
                 <setup>
@@ -40,9 +51,9 @@
         <translate>
             <modules>
                 <Quafzi_CustomerTypes>
-                     <files>
-                          <default>Quafzi_CustomerTypes.csv</default>
-                     </files>
+                    <files>
+                        <default>Quafzi_CustomerTypes.csv</default>
+                    </files>
                 </Quafzi_CustomerTypes>
             </modules>
         </translate>

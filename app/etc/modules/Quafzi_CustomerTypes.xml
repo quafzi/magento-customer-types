@@ -12,6 +12,9 @@
         <Quafzi_CustomerTypes>
             <active>true</active>
             <codePool>community</codePool>
+            <depends>
+                <Mage_Customer />
+            </depends>
         </Quafzi_CustomerTypes>
     </modules>
 </config>
