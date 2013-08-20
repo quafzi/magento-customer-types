@@ -13,14 +13,14 @@ class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
     */
     extends Netzarbeiter_CustomerActivation_Block_Adminhtml_Customer_Grid
 {
-	public function setCollection($collection)
-	{
+    public function setCollection($collection)
+    {
         $collection->addAttributeToSelect('type');
-		return parent::setCollection($collection);
-	}
-    
-	public function addColumn($name, $params)
-	{
+        return parent::setCollection($collection);
+    }
+
+    public function addColumn($name, $params)
+    {
         if ($name == 'action')
         {
             $types = Mage::getModel('customertypes/system_config_source_customer_types')
@@ -36,12 +36,12 @@ class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
             ));
         }
 
-		return parent::addColumn($name, $params);
-	}
+        return parent::addColumn($name, $params);
+    }
 
-	protected function _prepareMassaction()
-	{
-		parent::_prepareMassaction();
+    protected function _prepareMassaction()
+    {
+        parent::_prepareMassaction();
 
         $types = Mage::getModel('customertypes/system_config_source_customer_types')
             ->toOptionArray();
@@ -61,6 +61,6 @@ class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
             )
         ));
 
-		return $this;
-	}
+        return $this;
+    }
 }
