@@ -13,7 +13,7 @@ class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
     */
     extends Netzarbeiter_CustomerActivation_Block_Adminhtml_Customer_Grid
 {
-    public function setCollection($collection)
+    public function setCollection(Mage_Customer_Model_Resource_Customer_Collection $collection)
     {
         $collection->addAttributeToSelect('type');
         return parent::setCollection($collection);
