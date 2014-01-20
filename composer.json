@@ -1,0 +1,15 @@
+{
+    "name": "quafzi/customer-types",
+    "type": "magento-module",
+    "description": "This extension allows you to assign types to your customers. However, this has no effect, but you will be able to handle these types differently by hand or by developing your own customizing extension to make use of these customer types.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Birke",
+            "email": "tbirke@netextreme.de"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
