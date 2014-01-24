@@ -8,10 +8,7 @@
  * @license  http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
-    /*
     extends Mage_Adminhtml_Block_Customer_Grid
-    */
-    extends Netzarbeiter_CustomerActivation_Block_Adminhtml_Customer_Grid
 {
     public function setCollection(Mage_Customer_Model_Resource_Customer_Collection $collection)
     {
