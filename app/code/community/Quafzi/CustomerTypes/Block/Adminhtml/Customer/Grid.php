@@ -10,6 +10,12 @@
 class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
     extends Mage_Adminhtml_Block_Customer_Grid
 {
+    /**
+     * set collection
+     *
+     * @param Mage_Customer_Model_Resource_Customer_Collection $collection Collection
+     * @return null
+     */
     public function setCollection($collection)
     {
         $collection->addAttributeToSelect('type');
