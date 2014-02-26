@@ -8,7 +8,7 @@
  * @license  http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
-    extends Mage_Adminhtml_Block_Customer_Grid
+    extends Quafzi_CustomerPaymentFilter_Block_Adminhtml_Customer_Grid
 {
     /**
      * set collection
