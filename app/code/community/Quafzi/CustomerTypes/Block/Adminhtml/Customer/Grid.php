@@ -29,7 +29,7 @@ class Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid
             $types = Mage::getModel('customertypes/system_config_source_customer_types')
                 ->toOptionArray();
             unset($types['']);
-            self::addColumn('type', array(
+            parent::addColumn('type', array(
                 'header'    => Mage::helper('customertypes')->__('Customer Type'),
                 'align'     => 'center',
                 'width'     => '80px',
