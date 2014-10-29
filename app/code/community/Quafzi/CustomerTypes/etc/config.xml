@@ -14,17 +14,6 @@
         </Quafzi_CustomerTypes>
     </modules>
     <global>
-        <blocks>
-            <customertypes>
-                <class>Quafzi_CustomerTypes_Block</class>
-            </customertypes>
-            <adminhtml>
-                <rewrite>
-                    <!-- overwrite Mage_Adminhtml_Block_Customer_Grid to add type to grid -->
-                    <customer_grid>Quafzi_CustomerTypes_Block_Adminhtml_Customer_Grid</customer_grid>
-                </rewrite>
-            </adminhtml>
-        </blocks>
         <helpers>
             <customertypes>
                 <class>Quafzi_CustomerTypes_Helper</class>
@@ -59,6 +48,24 @@
         </routers>
     </admin>
     <adminhtml>
+        <events>
+            <core_layout_block_create_after>
+                <observers>
+                    <customertypes_adminhtml_block_html_before>
+                        <class>customertypes/observer</class>
+                        <method>beforeBlockToHtml</method>
+                    </customertypes_adminhtml_block_html_before>
+                </observers>
+            </core_layout_block_create_after>
+            <eav_collection_abstract_load_before>
+                <observers>
+                    <customertypes_change_collection>
+                        <class>customertypes/observer</class>
+                        <method>beforeCustomerCollectionLoad</method>
+                    </customertypes_change_collection>
+                </observers>
+            </eav_collection_abstract_load_before>
+        </events>
         <translate>
             <modules>
                 <Quafzi_CustomerTypes>
