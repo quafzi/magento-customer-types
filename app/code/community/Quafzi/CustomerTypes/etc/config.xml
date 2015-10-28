@@ -38,13 +38,13 @@
     </global>
     <admin>
         <routers>
-            <customertypes>
-                <use>admin</use>
+            <adminhtml>
                 <args>
-                    <module>Quafzi_CustomerTypes</module>
-                    <frontName>customertypes</frontName>
+                    <modules>
+                        <customertypes before="Mage_Adminhtml">Quafzi_CustomerTypes_Adminhtml</customertypes>
+                    </modules>
                 </args>
-            </customertypes>
+            </adminhtml>
         </routers>
     </admin>
     <adminhtml>
